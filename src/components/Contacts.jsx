@@ -85,7 +85,7 @@ const Contacts = () => {
         {/* Right Side - Contact Form */}
         <div className="bg-base-200 rounded-3xl p-6 sm:p-8 shadow-xl">
           <form
-            action="https://docs.google.com/forms/d/e/1FAIpQLSdllyrs8g2PcPiFz-6onHS-yisAjcLv19XyjmlFzuAxrHCTQg/viewform?usp=header"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHLHNkl0EA7nVQgJD_1QC2I-LQ5hQRmmbWxJP4L1bBaDOO3A/formResponse"
             method="POST"
             target="_blank"
             className="space-y-6"

@@ -31,7 +31,7 @@ const About = () => {
             <img
               src='https://i.postimg.cc/7Z3ZN5b0/011642-copy-removebg-preview.png'
               alt="Monir Mohammed Nayem"
-              className="w-full rounded-3xl shadow-xl border border-base-300"
+              className="w-4/5 rounded-3xl shadow-xl border border-base-300"
             />
           </div>
 

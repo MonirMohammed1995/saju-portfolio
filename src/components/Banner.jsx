@@ -55,29 +55,25 @@ const Banner = () => {
   const { label, icon: Icon, color } = roles[index];
 
   return (
-    <div
-      className="bg-cyan-700 min-h-screen bg-center px-4 lg:px-20 mt-24"
-    >
-      {/* Overlay */}
-
-      <div className="relative z-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 min-h-screen">
-        {/* Text Content */}
-        <div className="text-white space-y-6 text-center lg:text-left">
-          <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+    <div className="bg-cyan-800 min-h-[90vh] md:min-h-screen py-8 px-4 lg:px-16 xl:px-28 pt-30">
+      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-16">
+        
+        {/* Text Section */}
+        <div className="text-white flex-1 space-y-6 text-center lg:text-left">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
             Hello, I'm <br />
             <span className="text-accent">
               Monir Mohammed
-              <br />
-              Nayem
+              <br /> Nayem
             </span>
           </h1>
 
-          <p className="max-w-xl">
+          <p className="max-w-xl mx-auto lg:mx-0 text-base md:text-lg">
             A passionate Full Stack MERN Developer, skilled in building responsive, scalable, and secure web applications with clean code and modern technologies.
           </p>
 
           <div
-            className={`flex items-center justify-center lg:justify-start gap-3 text-2xl font-semibold transition-opacity duration-500 ${
+            className={`flex items-center justify-center lg:justify-start gap-3 text-xl md:text-2xl font-semibold transition-opacity duration-500 ${
               fade ? 'opacity-100' : 'opacity-0'
             } ${color}`}
           >
@@ -85,22 +81,24 @@ const Banner = () => {
             <span>{label}</span>
           </div>
 
-          <a
-                href="/resume/cv.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center px-4 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-white font-semibold hover:scale-105 transition"
-              >
-                Resume
-              </a>
+          <div className="flex justify-center lg:justify-start">
+            <a
+              href="/resume/cv.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-accent text-white font-semibold shadow-md hover:scale-105 transition"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
 
-        {/* Profile Image */}
-        <div>
+        {/* Image Section */}
+        <div className="flex-1 flex justify-center">
           <img
             src="https://i.postimg.cc/HsKXqBGw/banner.jpg"
             alt="Profile"
-            className="max-w-xs lg:max-w-md rounded-3xl shadow-2xl"
+            className="w-64 sm:w-72 md:w-80 lg:w-[400px] xl:w-[450px] rounded-full shadow-2xl"
           />
         </div>
       </div>

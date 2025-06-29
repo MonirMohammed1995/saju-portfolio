@@ -39,8 +39,8 @@ const Navbar = () => {
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', link: 'about' },
-    { name: 'Projects', link: 'projects' },
     { name: 'Skills', link: 'skills' },
+    { name: 'Projects', link: 'projects' },
     { name: 'Contacts', link: 'contacts' },
   ];
 
@@ -73,7 +73,7 @@ const Navbar = () => {
                     to={item.path}
                     className={({ isActive }) =>
                       `px-3 py-2 rounded-md transition duration-200 hover:bg-base-200 hover:text-primary ${
-                        isActive ? 'text-primary font-semibold' : 'text-base-content'
+                        isActive ? 'text-blue-950 font-semibold' : 'text-base-content'
                       }`
                     }
                   >
@@ -160,7 +160,7 @@ const Navbar = () => {
                       offset={-80}
                       spy={true}
                       activeClass="text-primary font-semibold"
-                      className="cursor-pointer block px-3 py-2 rounded-md hover:bg-base-200 hover:text-primary"
+                      className="cursor-pointer block px-3 py-2 rounded-md hover:bg-base-200 hover:text-blue-950"
                     >
                       {item.name}
                     </ScrollLink>
