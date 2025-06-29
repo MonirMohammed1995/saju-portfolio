@@ -35,7 +35,7 @@ const Education = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="educations" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">
         Educational <span className="text-cyan-400">Qualifications</span>
       </h2>

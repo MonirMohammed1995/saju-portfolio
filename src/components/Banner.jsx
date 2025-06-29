@@ -56,7 +56,7 @@ const Banner = () => {
 
   return (
     <div
-      className="bg-cyan-700 min-h-screen bg-center px-4 lg:px-20"
+      className="bg-cyan-700 min-h-screen bg-center px-4 lg:px-20 mt-24"
     >
       {/* Overlay */}
 

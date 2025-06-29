@@ -24,7 +24,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="bg-base-100 my-10 px-4 sm:px-8 md:px-16 lg:px-24">
+    <section id='experience' className="bg-base-100 my-10 px-4 sm:px-8 md:px-16 lg:px-24">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">
         My <span className="text-cyan-400">Experience</span>

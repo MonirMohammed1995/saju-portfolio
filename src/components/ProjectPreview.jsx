@@ -67,7 +67,7 @@ const projects = [
 
 const ProjectPreview = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
+    <section id="projects" className="max-w-7xl mx-auto px-4 md:px-8 py-12">
       <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">
         My<span className="text-cyan-300">Projects</span>
       </h2>

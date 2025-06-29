@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router";
 import Root from "../Layouts/Root";
 import ErrorPage from "../Pages/ErrorPage";
 import Home from "../Pages/Home";
-import SkillDetails from "../Pages/SkillDetails";
+import ContactPage from "../Pages/ContactPage";
 
 export const router = createBrowserRouter([
   {
@@ -11,13 +11,13 @@ export const router = createBrowserRouter([
     errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
-        index:true,
+        index: true,
+        path:'/',
         Component:Home,
       },
       {
-        path:'/skill-details',
-        Component:SkillDetails,
+        path:'contact-page',
+        Component:ContactPage
       }
     ]
-  },
-]);
+  }])

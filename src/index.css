@@ -4,6 +4,14 @@
 *{
   font-family: "Inter", sans-serif;
 }
+.active-link {
+  color: #14b8a6; /* Tailwind's text-primary */
+  font-weight: 600;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 /* .montserrat{
   font-family: "Montserrat", sans-serif;
 }

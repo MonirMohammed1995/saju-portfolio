@@ -5,11 +5,11 @@ import Experience from '../components/Experience';
 import Skills from '../components/Skills';
 import ProjectPreview from '../components/ProjectPreview';
 import Education from '../components/Education';
-import Contacts from './Contacts';
+import Contacts from '../components/Contacts';
 
 const Home = () => {
     return (
-        <div>
+        <div id=''>
             <Banner></Banner>
             <Experience></Experience>
             <About></About>
