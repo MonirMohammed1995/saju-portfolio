@@ -70,7 +70,7 @@ const Navbar = () => {
 
         {/* Resume Button */}
         <a
-          href="../../public/resume/resume.pdf"
+          href="/resume/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden lg:inline-flex px-4 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-white font-semibold hover:scale-105 transition"
@@ -116,7 +116,7 @@ const Navbar = () => {
             ))}
             <div className="pt-2">
               <a
-                href="../../public/resume/resume.pdf"
+                href="/resume/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block w-full text-center px-4 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-white font-semibold hover:scale-105 transition"
