@@ -1,4 +1,4 @@
-import { FaLink } from "react-icons/fa";
+import { FaGithub, FaLink } from "react-icons/fa";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import tutor1 from '../assets/images/tutor-booking1.png'
@@ -28,6 +28,7 @@ const projects = [
       `${tutor3}`,
     ],
     link: "https://onlinetutor-booking-system.netlify.app/",
+    link1: "https://github.com/MonirMohammed1995/assignment-11"
   },
   {
     title: "Plant Care Tracker",
@@ -45,6 +46,7 @@ const projects = [
       `${tracker3}`,
     ],
     link: "https://assignment10-polished-plantcare.netlify.app/",
+    link1: "https://github.com/MonirMohammed1995/assignment10-polished-client"
   },
   {
     title: "Subscription Box Services",
@@ -62,6 +64,7 @@ const projects = [
       `${subscrive3}`,
     ],
     link: "https://subscriptionbox-a9-catlilly.netlify.app/",
+    link1: "https://github.com/MonirMohammed1995/assignment-10"
   },
 ];
 
@@ -121,14 +124,24 @@ const ProjectPreview = () => {
                 </ul>
               </div>
 
-              <a
+              <div className="flex justify-around">
+                <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 rounded-xl px-8 py-3 bg-gradient-to-r from-primary to-accent text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out"
+                className="flex justify-center items-center gap-2 mt-4 rounded-xl px-8 py-3 bg-gradient-to-r from-primary to-accent text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out"
               >
-                 View Live Project
+                <FaLink /> View Live Project
               </a>
+              <a
+                href={project.link1}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex justify-center items-center gap-2 mt-4 rounded-xl px-8 py-3 bg-white text-gray-900 font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 ease-in-out"
+              >
+               <FaGithub className="text-2xl"/>  GitHub Link
+              </a>
+              </div>
             </div>
           </div>
         ))}

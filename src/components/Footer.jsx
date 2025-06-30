@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
@@ -31,13 +31,7 @@ const Footer = () => {
                 <NavLink to="/" className={navLinkStyle}>Home</NavLink>
               </li>
               <li>
-                <NavLink to="/about" className={navLinkStyle}>About</NavLink>
-              </li>
-              <li>
-                <NavLink to="/projects" className={navLinkStyle}>Projects</NavLink>
-              </li>
-              <li>
-                <NavLink to="/contacts" className={navLinkStyle}>Contact</NavLink>
+                <NavLink to="/contact-page" className={navLinkStyle}>Contact Page</NavLink>
               </li>
             </ul>
           </div>

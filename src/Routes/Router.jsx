@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
         Component:Home,
       },
       {
-        path:'contact-page',
+        path:'/contact-page',
         Component:ContactPage
       }
     ]

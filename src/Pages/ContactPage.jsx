@@ -87,7 +87,7 @@ const ContactPage = () => {
           className="bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 dark:border-gray-800 rounded-3xl shadow-xl p-8"
         >
           <form
-            action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse"
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdHLHNkl0EA7nVQgJD_1QC2I-LQ5hQRmmbWxJP4L1bBaDOO3A/formResponse"
             method="POST"
             target="_blank"
             className="space-y-6"
