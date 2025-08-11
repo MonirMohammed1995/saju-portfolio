@@ -1,18 +1,22 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { GraduationCap, School, BookOpen } from "lucide-react";
 
 const Education = () => {
   const institutes = [
     {
+      icon: <GraduationCap className="text-cyan-400" size={40} />,
       degree: "🎓 C.S.E (Computer Science & Engineering)",
       institute: "Sylhet International University, Bangladesh",
       duration: "2014 - 2017",
       passingYear: "2018",
-      board:"N/A",
+      board: "N/A",
       group: "Department of CSE",
       description:
-        "Completed a Bachelor'Computer Science and Engineering (CSE) is an interdisciplinary field that combines the principles of computer science and computer engineering to design, develop, and implement computer systems and software. It encompasses the study of algorithms, programming languages, data structures, computer architecture, networks, and more. CSE professionals work on a wide range of applications, from developing software and hardware solutions to advancing fields like artificial intelligence and cybersecurity. s degree with a major in Business Administration. Developed critical thinking, communication skills, and gained understanding in business management, finance, and marketing.",
+        "Studied core and advanced topics in computer science, including algorithms, programming, data structures, networking, and AI. Built problem-solving skills and developed industry-grade projects.",
     },
     {
+      icon: <School className="text-green-400" size={40} />,
       degree: "🏫 HSC (Higher Secondary Certificate)",
       institute: "Dharmaghar College",
       duration: "2011 - 2012",
@@ -20,63 +24,71 @@ const Education = () => {
       board: "Sylhet Board",
       group: "Science",
       description:
-        "Completed Higher Secondary It focuses on foundational scientific knowledge and skills, with a strong emphasis on subjects like Physics, Chemistry, Biology, and Mathematics. ",
+        "Focused on Physics, Chemistry, Biology, and Mathematics, developing strong analytical and scientific reasoning skills.",
     },
     {
+      icon: <BookOpen className="text-yellow-400" size={40} />,
       degree: "🏫 SSC (Secondary School Certificate)",
       institute: "Mofazzil Ali High School",
-      duration: "2010-2010",
+      duration: "2010",
       passingYear: "2011",
       board: "Sylhet Board",
       group: "Science",
       description:
-        "Completed SSC with a concentration in Science. Developed basics in physics, chemistry, mathematics, and general studies with consistent academic performance.",
+        "Built foundational knowledge in core science subjects with consistent academic excellence.",
     },
   ];
 
   return (
-    <section id="educations" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="educations" className="max-w-6xl mx-auto px-4 py-16">
       <h2 className="text-4xl font-bold text-center text-blue-500 mb-12">
-        Educational <span className="text-cyan-400">Qualifications</span>
+        Educational <span className="text-cyan-400">Journey</span>
       </h2>
 
-      <div className="grid grid-cols-1 gap-8">
+      <div className="relative border-l-4 border-cyan-400">
         {institutes.map((edu, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-base-200 rounded-3xl shadow-md hover:shadow-xl transition-all p-6 sm:p-8"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            className="mb-12 ml-8"
           >
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-              <div>
-                <h3 className="text-2xl sm:text-3xl text-cyan-600 font-bold">
-                  {edu.degree}
-                </h3>
-                <p className="text-lg  mt-1">
-                  {edu.institute}
+            <div className="absolute -left-8 flex items-center justify-center w-16 h-16 rounded-full bg-base-200 shadow-lg">
+              {edu.icon}
+            </div>
+            <div className="bg-base-200 rounded-2xl shadow-lg hover:shadow-xl transition-all p-6">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div>
+                  <h3 className="text-xl sm:text-2xl font-bold text-cyan-500">
+                    {edu.degree}
+                  </h3>
+                  <p className="text-lg text-gray-400">{edu.institute}</p>
+                </div>
+                <p className="text-green-400 font-semibold mt-2 sm:mt-0">
+                  {edu.duration}
                 </p>
               </div>
-              <p className="text-sm sm:text-md md:text-lg font-semibold text-green-400">
-                {edu.duration}
+
+              <div className="flex flex-wrap gap-4 mt-3 text-sm">
+                <span>
+                  <span className="font-semibold text-cyan-500">Passing Year:</span>{" "}
+                  {edu.passingYear}
+                </span>
+                <span>
+                  <span className="font-semibold">Board:</span> {edu.board}
+                </span>
+                <span>
+                  <span className="font-semibold">Faculty:</span> {edu.group}
+                </span>
+              </div>
+
+              <p className="mt-3 text-gray-300 leading-relaxed">
+                {edu.description}
               </p>
             </div>
-
-            <div className="flex flex-wrap gap-6 mt-4">
-              <div className="text-sm sm:text-base">
-                <span className="font-semibold text-cyan-500">Passing Year:</span>{" "}
-                <span className="text-green-500 font-bold">{edu.passingYear}</span>
-              </div>
-              <div className="text-sm sm:text-base">
-                <span className="font-semibold">Board:</span> {edu.board}
-              </div>
-              <div className="text-sm sm:text-base">
-                <span className="font-semibold">Faculty:</span> {edu.group}
-              </div>
-            </div>
-
-            <p className="mt-4 leading-relaxed text-sm sm:text-base">
-              {edu.description}
-            </p>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>
