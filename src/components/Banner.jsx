@@ -1,40 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import {
-  FaLaptopCode,
-  FaServer,
-  FaUserShield,
-  FaTools,
-  FaUniversity,
-} from 'react-icons/fa';
+import React, { useEffect, useState } from "react";
+import { FaLaptopCode, FaServer, FaUserShield, FaTools, FaUniversity } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-// Title Items Configuration
 const roles = [
-  {
-    label: 'Full Stack Web Developer',
-    icon: FaLaptopCode,
-    color: 'text-primary',
-  },
-  {
-    label: 'Software Engineer',
-    icon: FaServer,
-    color: 'text-secondary',
-  },
-  {
-    label: 'IT Officer',
-    icon: FaUserShield,
-    color: 'text-accent',
-  },
-  {
-    label: 'OS Maintenance Expert',
-    icon: FaTools,
-    color: 'text-info',
-  },
-  {
-    label: 'Banking Professional',
-    icon: FaUniversity,
-    color: 'text-success',
-  },
+  { label: "Full Stack Web Developer", icon: FaLaptopCode, color: "from-purple-400 to-indigo-500" },
+  { label: "Software Engineer", icon: FaServer, color: "from-cyan-400 to-blue-500" },
+  { label: "IT Officer", icon: FaUserShield, color: "from-green-400 to-emerald-500" },
+  { label: "OS Maintenance Expert", icon: FaTools, color: "from-yellow-400 to-orange-500" },
+  { label: "Banking Professional", icon: FaUniversity, color: "from-pink-400 to-red-500" },
 ];
 
 const Banner = () => {
@@ -47,7 +20,7 @@ const Banner = () => {
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % roles.length);
         setFade(true);
-      }, 500);
+      }, 300);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
@@ -55,54 +28,75 @@ const Banner = () => {
   const { label, icon: Icon, color } = roles[index];
 
   return (
-    <div className="bg-cyan-800 min-h-[90vh] md:min-h-screen py-8 px-4 lg:px-16 xl:px-28 pt-30">
-      <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-16">
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-gray-900 via-cyan-900 to-blue-900 overflow-hidden">
+      {/* Decorative Background Glow */}
+      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-500/20 rounded-full blur-3xl"></div>
+
+      {/* Content Container */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-center gap-12">
         
         {/* Text Section */}
-        <div className="text-white flex-1 space-y-6 text-center lg:text-left">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="flex-1 text-white space-y-6 text-center lg:text-left"
+        >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
             Hello, I'm <br />
-            <span className="text-accent">
-              Monir Mohammed
-              <br /> Nayem
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-transparent bg-clip-text">
+              Monir Mohammed Nayem
             </span>
           </h1>
 
-          <p className="max-w-xl mx-auto lg:mx-0 text-base md:text-lg">
+          <p className="max-w-xl mx-auto lg:mx-0 text-base md:text-lg text-gray-300">
             A passionate Full Stack MERN Developer, skilled in building responsive, scalable, and secure web applications with clean code and modern technologies.
           </p>
 
+          {/* Rotating Role */}
           <div
             className={`flex items-center justify-center lg:justify-start gap-3 text-xl md:text-2xl font-semibold transition-opacity duration-500 ${
-              fade ? 'opacity-100' : 'opacity-0'
-            } ${color}`}
+              fade ? "opacity-100" : "opacity-0"
+            }`}
           >
-            <Icon className="text-3xl" />
-            <span>{label}</span>
+            <div className={`p-3 rounded-full bg-gradient-to-br ${color} text-white shadow-lg`}>
+              <Icon />
+            </div>
+            <span className={`bg-gradient-to-r ${color} bg-clip-text text-transparent`}>
+              {label}
+            </span>
           </div>
 
+          {/* Resume Button */}
           <div className="flex justify-center lg:justify-start">
             <a
               href="/resume/cv.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-accent text-white font-semibold shadow-md hover:scale-105 transition"
+              className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all"
             >
               Download Resume
             </a>
           </div>
-        </div>
+        </motion.div>
 
         {/* Image Section */}
-        <div className="flex-1 flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          className="flex-1 flex justify-center relative"
+        >
+          <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400/30 to-blue-500/30 blur-2xl"></div>
           <img
             src="https://i.postimg.cc/HsKXqBGw/banner.jpg"
             alt="Profile"
-            className="w-64 sm:w-72 md:w-80 lg:w-[400px] xl:w-[450px] rounded-full shadow-2xl"
+            className="w-72 sm:w-80 lg:w-[400px] xl:w-[450px] rounded-full shadow-2xl border-4 border-white/20 relative z-10"
           />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
