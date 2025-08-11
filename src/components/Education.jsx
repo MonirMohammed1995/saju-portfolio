@@ -6,7 +6,7 @@ const Education = () => {
   const institutes = [
     {
       icon: <GraduationCap className="text-cyan-400" size={40} />,
-      degree: "🎓 C.S.E (Computer Science & Engineering)",
+      degree: "C.S.E (Computer Science & Engineering)",
       institute: "Sylhet International University, Bangladesh",
       duration: "2014 - 2017",
       passingYear: "2018",
@@ -17,7 +17,7 @@ const Education = () => {
     },
     {
       icon: <School className="text-green-400" size={40} />,
-      degree: "🏫 HSC (Higher Secondary Certificate)",
+      degree: "HSC (Higher Secondary Certificate)",
       institute: "Dharmaghar College",
       duration: "2011 - 2012",
       passingYear: "2013",
@@ -28,7 +28,7 @@ const Education = () => {
     },
     {
       icon: <BookOpen className="text-yellow-400" size={40} />,
-      degree: "🏫 SSC (Secondary School Certificate)",
+      degree: "SSC (Secondary School Certificate)",
       institute: "Mofazzil Ali High School",
       duration: "2010",
       passingYear: "2011",
