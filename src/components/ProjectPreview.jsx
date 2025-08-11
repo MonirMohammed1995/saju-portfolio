@@ -24,6 +24,7 @@ const projects = [
       "JWT authentication with role-based private routes.",
       "Secure API with MongoDB aggregation.",
       "Dynamic filtering & sorting (client + server).",
+      "Payment Setting up and Varification (client + server).",
       "Secure deployment with environment variables.",
     ],
     images: [scholar1, scholar2, scholar3],
