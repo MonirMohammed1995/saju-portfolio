@@ -166,7 +166,7 @@ const Navbar = () => {
                 ))}
                 <div className="pt-3">
                   <a
-                    href="/resume/resume.pdf"
+                    href="/resume/Monir_Mohammed_Nayem.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center px-4 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"
