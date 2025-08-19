@@ -76,7 +76,7 @@ const Banner = () => {
               rel="noopener noreferrer"
               className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold shadow-md hover:shadow-lg hover:scale-105 transition-all"
             >
-              Download Resume
+              Download CV
             </a>
           </div>
         </motion.div>

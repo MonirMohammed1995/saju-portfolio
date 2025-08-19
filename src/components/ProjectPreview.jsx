@@ -14,9 +14,11 @@ import tracker3 from '../assets/images/plant-tracker3.png';
 import subscrive1 from '../assets/images/subscription1.png';
 import subscrive2 from '../assets/images/subscription2.png';
 import subscrive3 from '../assets/images/subscription3.png';
+import { NavLink } from "react-router";
 
-const projects = [
+export const projects = [
   {
+    id:"1",
     title: "Scholarship Management System",
     description:
       "A full-stack web app for scholarship management based on University. Users can book, review, pay for applications, and manage their learning efficiently via admin and user roles.",
@@ -32,6 +34,7 @@ const projects = [
     link1: "https://github.com/MonirMohammed1995/assignment-12-client",
   },
   {
+    id:"2",
     title: "Language Exchange - Tutor Booking Platform",
     description:
       "A full-stack web app for booking online tutors based on languages. Users can book, review, and manage their learning efficiently.",
@@ -46,6 +49,7 @@ const projects = [
     link1: "https://github.com/MonirMohammed1995/assignment-11",
   },
   {
+    id:"3",
     title: "Plant Care Tracker",
     description:
       "A MERN stack app to track plant care tasks, watering schedules, and growth. Users can manage their personal plant collection with ease.",
@@ -60,6 +64,7 @@ const projects = [
     link1: "https://github.com/MonirMohammed1995/assignment10-polished-client",
   },
   {
+    id:"4",
     title: "Subscription Box Services",
     description:
       "An e-commerce subscription platform allowing users to purchase box services. It includes payment, subscription, and admin management.",
