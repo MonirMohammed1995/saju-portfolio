@@ -30,7 +30,7 @@ export const projects = [
       "Secure deployment with environment variables.",
     ],
     images: [scholar1, scholar2, scholar3],
-    link: "https://scholarship-managment-sys.netlify.app/",
+    link: "https://assignment12-polished-client.netlify.app/",
     link1: "https://github.com/MonirMohammed1995/assignment-12-client",
   },
   {
@@ -45,7 +45,7 @@ export const projects = [
       "Secure deployment with environment variables.",
     ],
     images: [tutor1, tutor2, tutor3],
-    link: "https://onlinetutor-booking-system.netlify.app/",
+    link: "https://gilded-elf-ed0db1.netlify.app/",
     link1: "https://github.com/MonirMohammed1995/assignment-11",
   },
   {
