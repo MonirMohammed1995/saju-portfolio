@@ -31,7 +31,7 @@ const Home = () => {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <Experience />
+      
       </motion.div>
 
       <motion.div
