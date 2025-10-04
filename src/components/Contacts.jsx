@@ -111,7 +111,7 @@ const Contacts = () => {
               </a>
 
               <a
-                href="https://www.facebook.com/monirmdnayemsaju42"
+                href="https://www.facebook.com/monirmdnayem"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -121,7 +121,7 @@ const Contacts = () => {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/monir-mohammed-nayem-b17915169/"
+                href="https://www.linkedin.com/in/monirmdnayem/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
